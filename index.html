@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Emran Hossain – Cybersecurity Researcher, Penetration Tester & Bug Bounty Hunter. Google Cybersecurity Certified.">
+<meta name="keywords" content="Cybersecurity Researcher, Bug Bounty Hunter, Penetration Tester, Web Security">
+<meta name="author" content="Emran Hossain">
+
+<title>Emran Hossain | Cybersecurity Researcher</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #050b10;
+  color: #e5e7eb;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+/* ================= MATRIX BACKGROUND ================= */
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* ================= NAV ================= */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(5, 11, 16, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #0f2a1f;
+  z-index: 100;
+}
+
+nav h2 {
+  color: #22c55e;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #bbf7d0;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #22c55e;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  min-height: 100vh;
+  padding: 140px 8%;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #22c55e;
+}
+
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  color: #22c55e;
+}
+
+.hero h3 {
+  margin-top: 20px;
+  font-size: 1.6rem;
+  color: #86efac;
+}
+
+.hero p {
+  margin-top: 30px;
+  max-width: 900px;
+  font-size: 1.2rem;
+  color: #d1fae5;
+}
+
+/* ================= BUTTONS ================= */
+.buttons {
+  margin-top: 50px;
+  display: flex;
+  gap: 25px;
+}
+
+.btn {
+  padding: 16px 40px;
+  border-radius: 10px;
+  border: 2px solid #22c55e;
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #22c55e;
+  color: #000;
+  box-shadow: 0 0 35px #22c55e;
+}
+
+/* ================= CONTENT ================= */
+.content {
+  max-width: 1100px;
+  font-size: 1.15rem;
+  color: #d1fae5;
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(8, 15, 20, 0.85);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #133b2c;
+}
+
+.card:hover {
+  border-color: #22c55e;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 0.95rem;
+  color: #86efac;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  nav ul {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="matrix"></canvas>
+
+<nav>
+  <h2>Portfolio</h2>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Emran <span>Hossain</span></h1>
+  <h3 id="typing"></h3>
+
+  <p>
+    Cybersecurity Researcher, Penetration Tester, and Bug Bounty Hunter with strong
+    hands-on experience in web application security, vulnerability research,
+    and responsible disclosure.
+  </p>
+
+  <div class="buttons">
+    <a href="#contact" class="btn">Contact Me</a>
+    <a href="Resume Universal.pdf" class="btn" download>Download Resume</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="content">
+    <p>
+      I am a dedicated cybersecurity professional with practical expertise in web
+      application penetration testing, vulnerability analysis, and bug bounty hunting.
+      I have successfully discovered and responsibly disclosed high-impact security
+      vulnerabilities across real-world platforms, helping organizations strengthen
+      their security posture.
+      <br><br>
+      I am recognized as a <strong>Top 1% global performer</strong> on both
+      TryHackMe and the PortSwigger Web Security Academy, where I continuously sharpen
+      my skills through advanced labs and real-world attack simulations.
+      <br><br>
+      I hold the <strong>Google Cybersecurity Certificate</strong>, validating my
+      hands-on knowledge in security operations, incident response, and modern threat
+      defense.
+      <br><br>
+      Cybersecurity is not just my profession—it is my long-term commitment.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2 class="section-title">Core Skills</h2>
+  <div class="grid">
+    <div class="card">Web Application Penetration Testing (VAPT)</div>
+    <div class="card">Bug Bounty Hunting & Responsible Disclosure</div>
+    <div class="card">OWASP Top 10 Vulnerabilities</div>
+    <div class="card">XSS, SQL Injection, Authentication Flaws</div>
+    <div class="card">Reconnaissance & Attack Surface Mapping</div>
+    <div class="card">Linux, Bash & Security Tooling</div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <h2 class="section-title">Achievements & Certifications</h2>
+  <div class="grid">
+    <div class="card">
+      🏆 <strong>Top 1% Global Ranking — TryHackMe</strong><br>
+      Advanced labs in penetration testing, networking, and exploit development.
+    </div>
+    <div class="card">
+      🏆 <strong>Top 1% Global Ranking — PortSwigger Academy</strong><br>
+      Mastery of real-world web security vulnerabilities.
+    </div>
+    <div class="card">
+      📜 <strong>Google Cybersecurity Certificate</strong><br>
+      Security operations, incident response, and threat mitigation.
+    </div>
+    <div class="card">
+      🔐 <strong>Bug Bounty & Vulnerability Research</strong><br>
+      Reported critical vulnerabilities through responsible disclosure.
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  <div class="card">
+    🎓 <strong>BSc in Computer Science & Engineering (CSE)</strong><br>
+    Varendra University
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <p class="content">
+    Interested in collaboration, research, or security testing?  
+    Feel free to connect with me.
+    <br><br>
+    🔗 GitHub | LinkedIn
+  </p>
+</section>
+
+<footer>
+  “Hack the system, but protect the world.” — Emran Hossain
+</footer>
+
+<script>
+/* Typing Animation */
+const text = "Cybersecurity Researcher | Penetration Tester | Bug Bounty Hunter";
+let i = 0;
+const typing = document.getElementById("typing");
+
+function typeEffect() {
+  if (i < text.length) {
+    typing.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 70);
+  }
+}
+typeEffect();
+/*
+/* Matrix Background */
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+
+const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const fontSize = 16;
+const columns = canvas.width / fontSize;
+const drops = Array(Math.floor(columns)).fill(1);
+
+function drawMatrix() {
+  ctx.fillStyle = "rgba(5,11,16,0.08)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#22c55e";
+  ctx.font = fontSize + "px monospace";
+
+  drops.forEach((y, i) => {
+    const text = letters[Math.floor(Math.random() * letters.length)];
+    ctx.fillText(text, i * fontSize, y * fontSize);
+    if (y * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+    drops[i]++;
+  });
+}
+setInterval(drawMatrix, 35);
+
+window.onresize = () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+};
+</script>
+
+</body>
+</html>
